@@ -1,3 +1,4 @@
+// this component render navbar. navbar contain sidenav in mobile state
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
