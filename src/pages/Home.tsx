@@ -1,5 +1,6 @@
 import Cards from "../components/Cards/Cards";
 import HeroSection from "../components/HeroSection/HeroSection";
+import Slider from "../components/slider/Slider";
 
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <Cards />
-      {/* <Nav/> */}
+      <Slider/>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Layout from "../layouts/Layout";
 import SignUp from "../pages/SignUp";
 import Tour from "../pages/Tour";
+import Tourism from "../pages/Tourism";
 
 const routes = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
             {
                 path: '/tour',
                 element: <Tour/>
+            },
+            {
+                path: '/tourism',
+                element: <Tourism/>
             }
         ]
 

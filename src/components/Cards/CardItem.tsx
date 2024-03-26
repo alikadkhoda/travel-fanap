@@ -18,20 +18,6 @@ export default function CardItem({path , label , src , text}: CardItem) {
                 </div>
             </Link>
         </li>
-    // <li className='card1'>
-    //     <Link className='card-link' to={path}>
-    //         <img className='card-img' src={src} alt={src} data-category={label} />
-    //     </Link>
-    //     <div className='content'>
-    //         <h5 className='text'>{text}</h5>
-    //     </div>
-    // </li>
-    //  <div className="card">
-    //  <img src="img_avatar.png" alt="Avatar" style="width:100%"/>
-    //  <div className="container">
-    //    <h4><b>John Doe</b></h4>
-    //    <p>Architect & Engineer</p>
-    //  </div>
-  //  </div> 
+
   )
 }
