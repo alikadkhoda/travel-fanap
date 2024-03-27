@@ -9,7 +9,7 @@ import image2 from '../../assets/images/masuleh.jpg'
 import image3 from '../../assets/images/isfahan_bridge.jpg'
 export default function Slider() {
   return (
-    <div className='container'>
+    <div className='container-slider'>
         <h2 className='title'>محبوب ترین‌ها</h2>
       <span className="border_line"></span>
       <Swiper

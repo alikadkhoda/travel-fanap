@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout";
 import SignUp from "../pages/SignUp";
 import Tour from "../pages/Tour";
 import Tourism from "../pages/Tourism";
+import Hotel from "../pages/Hotel";
 
 const routes = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const routes = createBrowserRouter([
             {
                 path: '/tourism',
                 element: <Tourism/>
+            },
+            {
+                path: '/hotels',
+                element: <Hotel/>
             }
         ]
 
