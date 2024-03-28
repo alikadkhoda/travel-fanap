@@ -86,3 +86,11 @@ a{
   object-fit: fill;
 } */
 
+.container-page{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(0deg, #4186f7, #1562dd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
