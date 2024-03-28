@@ -1,6 +1,6 @@
 // this component render navbar. navbar contain sidenav in mobile state
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import Button from '../Button/Button';
 import './Navbar.css'
 
@@ -8,24 +8,16 @@ import './Navbar.css'
 
 export default function Navbar() {
     const [menuState,setMenuState]=useState(false)
-    const [buttonState,setButtonState]=useState(true)
-
+  
+    // handle close and open sidenav
     const handleMenu=()=>{
         setMenuState(!menuState)
     }
+    // close sidenav when click on items in sidenav
     const closeMobileMenu=()=>{
         setMenuState(false)
     }
-    const handleButton=()=>{
-        if(window.innerWidth<=960)
-        setButtonState(false)
-        else
-        setButtonState(true)
-    }
-    useEffect(()=>{
-        handleButton()
-    })
-    window.addEventListener('resize', handleButton)
+
     return ( 
         <nav className='navbar'>
             <div className='navbar-container'>
@@ -33,28 +25,28 @@ export default function Navbar() {
                     Travel 
                 </Link>
                 <div className='menu-icon' onClick={handleMenu}>
-                    <i className={menuState ? 'fas fa-times':'fas fa-bars'}></i>
+                    <i className='fas fa-bars'></i>
                 </div>
                 <ul className={menuState ? 'nav-menu active':'nav-menu'}>
                     <li className='nav-item'>
-                        <Link to={'/'} className='nav-links' onClick={closeMobileMenu}>
+                        <NavLink to={'/'} className={({ isActive }) => isActive?'nav-links nav-link-active':'nav-links'} onClick={closeMobileMenu}>
                             صفحه اصلی
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className='nav-item'>
-                        <Link to={'/tourism'} className='nav-links' onClick={closeMobileMenu}>
+                        <NavLink to={'/tourism'} className={({ isActive }) => isActive?'nav-links nav-link-active':'nav-links'} onClick={closeMobileMenu}>
                              گردشگری
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className='nav-item'>
-                        <Link to={'/tour'} className='nav-links' onClick={closeMobileMenu}>
+                        <NavLink to={'/tour'} className={({ isActive }) => isActive?'nav-links nav-link-active':'nav-links'} onClick={closeMobileMenu}>
                              تور
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className='nav-item'>
-                        <Link to={'/hotels'} className='nav-links' onClick={closeMobileMenu}>
+                        <NavLink to={'/hotels'} className={({ isActive }) => isActive?'nav-links nav-link-active':'nav-links'} onClick={closeMobileMenu}>
                              رزرو هتل
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className='nav-item'>
                         <Link to={'/sign-up'} className='nav-links-mobile' onClick={closeMobileMenu}>
@@ -62,11 +54,11 @@ export default function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                {   buttonState ?
-                    <Button to={'/sign-up'} buttonStyle='btn--outline' buttonSize='btn--medium'>
+                <div className='button-state'>
+                <Button to={'/sign-up'} buttonStyle='btn--outline' buttonSize='btn--medium'>
                        ثبت نام
-                    </Button>:null
-                }
+                </Button>
+                </div>
             </div>
         </nav>
      );
