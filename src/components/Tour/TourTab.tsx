@@ -1,3 +1,4 @@
+// This component renders the display section of the provided tours
 import { Link } from "react-router-dom";
 import "./CardsGuideTour.css";
 import Button from "../Button/Button";

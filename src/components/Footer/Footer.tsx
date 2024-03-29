@@ -1,4 +1,4 @@
-
+ // this component render footer website. includes communication channels and newsletters
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import './Footer.css'

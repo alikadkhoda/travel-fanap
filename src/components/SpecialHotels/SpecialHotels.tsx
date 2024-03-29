@@ -1,37 +1,40 @@
-
+// this component render  specialHotels section. includes CardHotel component
+import { Link } from 'react-router-dom';
 import CardHotel from './CardHotel';
 import './SpecialHotels.css'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const data = [
-    {
-        image:'//cdn.hamgardi.com/Images/Place/20180123151/300/Hamgardi_16063hmfa05.jpg' ,
-        title:'هتل جهانگردی(جلفا)'
-    },
-    {
-        image:'//cdn.hamgardi.com/Images/Place/20170703181/300/Hamgardi_1922y2xl795.jpg' ,
-        title:'هتل دامون'
-    },
-    {
-        image:'//cdn.hamgardi.com/Images/Place/20151010171/300/Hamgardi_3649yg4kiA3.jpg' ,
-        title:'هتل آپارتمان سینا نور'
-    },
-    {
-        image:'//cdn.hamgardi.com/Images/Place/20160905091/300/Hamgardi_0709ynbi710.jpg' ,
-        title:'خانه بنی طبا'
-    }
-]
-
+type Hotel = {
+    id: string;
+    title: string;
+    image: string;
+}
 
 export default function SpecialHotels() {
+    const [hotels, setHotels] = useState<Hotel[]>([])
+    // get hotels information
+    useEffect(()=>{
+        axios.get('http://localhost:3000/hotels').then(res=>{
+            setHotels(res.data)
+        })
+    },[])
     return (
         <div className='special__hotel'>
             <h2 className='special__hotel__header'>هتل‌های ویژه</h2>
             <span className="special__hotel__header__line"></span>
+            <div className='morecites'>
+                <Link className='morecities_link' to={'#'}>نمایش بیشتر</Link>
+                <svg className='morecites_icon' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                </svg>
+
+            </div>
             <div className='carausel'>
                {
-                data.map(item=>{
+                hotels.map(hotel=>{
                     return(
-                        <CardHotel image={item.image} title={item.title} key={item.title}/>
+                        <CardHotel image={hotel.image} title={hotel.title} key={hotel.id}/>
                     )
                 })
                }

@@ -1,7 +1,6 @@
-
+// this component renders help cards section
 import CardItem from './CardItem';
 import './CardsGuide.css'
-
 
 export default function CardsGuide() {
     return ( 

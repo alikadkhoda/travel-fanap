@@ -1,3 +1,5 @@
+// this component render individual cards within the Cards component.
+
 import { Link } from 'react-router-dom';
 type CardItem ={
     path: string;

@@ -1,3 +1,4 @@
+// This component renders all types of tours
 import { Link } from "react-router-dom";
 import "./CardsGuideTour.css";
 import TourTab from "./TourTab";

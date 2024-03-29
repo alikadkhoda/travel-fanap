@@ -1,3 +1,4 @@
+// this component render  Card with  image and title hotel
 import { Link } from 'react-router-dom';
 import './SpecialHotels.css';
 type CardHotel = {

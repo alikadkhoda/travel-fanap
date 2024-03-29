@@ -1,3 +1,5 @@
+// this component renders Tourism page
+
 import Button from '../components/Button/Button';
 import Cards from '../components/Cards/Cards';
 import CardsGuide from '../components/Tourism/CardsGuide';

@@ -1,3 +1,4 @@
+// this component render 404 box
 import { Link } from "react-router-dom";
 import "./NotFoundBox.css";
 export default function NotFoundBox() {

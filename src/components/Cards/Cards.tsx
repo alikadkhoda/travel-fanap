@@ -1,3 +1,5 @@
+// this component render section cards
+
 import CardItem from './CardItem';
 import './Cards.css'
 import image9 from '../../assets/images/9.jpg'

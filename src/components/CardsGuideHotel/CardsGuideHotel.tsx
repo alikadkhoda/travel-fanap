@@ -1,4 +1,4 @@
-
+// this component render cards with information about booking hotels
 import CardItem from '../Tourism/CardItem';
 import './CardsGuideHotel.css'
 

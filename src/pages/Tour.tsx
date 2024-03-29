@@ -1,3 +1,5 @@
+// this component renders Tour page
+
 import Button from "../components/Button/Button";
 import CardsGuideTour from "../components/Tour/CardsGuideTour";
 import imageTour from "../assets/images/home.jpg";

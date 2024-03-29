@@ -1,3 +1,4 @@
+// This component renders the help card
 import './CardsGuide.css'
 
 type CardItem = {

@@ -1,4 +1,4 @@
-
+// this component render  Card with  image and title city
 import { Link } from 'react-router-dom';
 import './CitiesIran.css'
 

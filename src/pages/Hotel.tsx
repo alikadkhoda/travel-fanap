@@ -1,3 +1,4 @@
+// this component renders Hotel page
 
 import { ChangeEvent, useState } from 'react';
 import Button from '../components/Button/Button';
@@ -15,7 +16,7 @@ export default function Hotel() {
         date:'',
         time:''
     })
-
+    // handle search inputs (controlled component)
     const handleHotelInfo=(e:ChangeEvent<HTMLInputElement>)=>{
         setHotelInfo({
             ...hotelInfo,

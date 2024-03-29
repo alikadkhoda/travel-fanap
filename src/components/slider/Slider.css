@@ -45,7 +45,7 @@
     display: block;
     position: relative;
     width: 220px;
-    height: 2px;
+    height: 1px;
     margin: 20px auto;
     background-color: orange;
   }
@@ -53,7 +53,7 @@
     content: '';
     position: absolute;
     width: 50%;
-    height: 4px;
+    height: 3px;
     border-radius: 2px;
     top: 0;
     bottom: 0;

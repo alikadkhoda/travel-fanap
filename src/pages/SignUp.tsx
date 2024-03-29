@@ -1,4 +1,4 @@
-// this component is a sign-up page
+// this component renders sign-up page
 import SignUpForm from '../components/SignUp/SignUpForm';
 import imagePage from '../assets/images/8.jpg'
 
