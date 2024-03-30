@@ -72,6 +72,6 @@ video{
 }
 @media screen and (max-width:633px){
     .search-input{
-        width: 400px;
+        width: 300px;
     }
 }
