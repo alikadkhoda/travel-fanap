@@ -2,23 +2,28 @@
 import { Link } from 'react-router-dom';
 import CardCity from './CardCity';
 import './CitiesIran.css'
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
-type City = {
-    id: string;
-    title: string;
-    image: string;
-}
+const data = [
+    {
+        "id": "1",
+        "image": "/assets/images/cities/Hamgardi_3932u7je0C9.jpg",
+        "title": "جهرم"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/cities/Hamgardi_393715u7183.jpg",
+        "title": "قم"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/cities/Hamgardi_39214pa5iAB.jpg",
+        "title": "شوشتر"
+      }
+]
+
 
 export default function CitiesIran() {
-    const [cities, setCities] = useState<City[]>([])
-    // get cities
-    useEffect(()=>{
-        axios.get('http://localhost:3000/cities').then(res=>{
-            setCities(res.data)
-        })
-    },[])
+   
     return (
         <div className='cities'>
             <h2 className='cities_header'>شهرهای ایران</h2>
@@ -31,7 +36,7 @@ export default function CitiesIran() {
             </div>
             <div className='cities_wrapper'>
                 {
-                    cities.map(city=>{
+                    data.map(city=>{
                         return(
                             <CardCity image={city.image} title={city.title} key={city.id} />
                         )

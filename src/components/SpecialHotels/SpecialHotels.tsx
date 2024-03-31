@@ -2,23 +2,31 @@
 import { Link } from 'react-router-dom';
 import CardHotel from './CardHotel';
 import './SpecialHotels.css'
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
-type Hotel = {
-    id: string;
-    title: string;
-    image: string;
-}
+const data = [
+    {
+        "id": "1",
+        "image": "/assets/images/hotels/Hamgardi_16063hmfa05.jpg",
+        "title": "هتل جهانگردی(جلفا)"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/hotels/Hamgardi_3649yg4kiA3.jpg",
+        "title": "هتل دامون"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/hotels/Hamgardi_1922y2xl795.jpg",
+        "title": "هتل آپارتمان سینا نور"
+      },
+      {
+        "id": "4",
+        "image": "/assets/images/hotels/Hamgardi_0709ynbi710.jpg",
+        "title": "خانه بنی طبا"
+      }
+]
 
 export default function SpecialHotels() {
-    const [hotels, setHotels] = useState<Hotel[]>([])
-    // get hotels information
-    useEffect(()=>{
-        axios.get('http://localhost:3000/hotel').then(res=>{
-            setHotels(res.data)
-        })
-    },[])
     return (
         <div className='special__hotel'>
             <h2 className='special__hotel__header'>هتل‌های ویژه</h2>
@@ -32,7 +40,7 @@ export default function SpecialHotels() {
             </div>
             <div className='carausel'>
                {
-                hotels.map(hotel=>{
+                data.map(hotel=>{
                     return(
                         <CardHotel image={hotel.image} title={hotel.title} key={hotel.id}/>
                     )
