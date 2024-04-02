@@ -38,7 +38,7 @@ export default function Slider() {
         className="mySwiper"
       >
         {slides.map((slide) => (
-          <SwiperSlide>
+          <SwiperSlide key={slide.content}>
             <div className="slide">
               <img src={slide.url_img} alt="image1" />
               <div className="content">{slide.content}</div>

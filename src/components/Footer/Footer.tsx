@@ -38,9 +38,9 @@ import './Footer.css'
         </div>
         <div className="footer-link-wrapper">
             <div className="footer-link-items">
-                <h2>رزور </h2>
-                <Link to="/">رزور هتل</Link>
-                <Link to="/">رزور بلیط هواپیما</Link>
+                <h2>رزرو </h2>
+                <Link to="/">رزرو هتل</Link>
+                <Link to="/">رزرو بلیط هواپیما</Link>
                 <Link to="/">رزرو بلیط قطار</Link>
             </div>
             <div className="footer-link-items">
