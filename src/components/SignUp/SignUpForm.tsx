@@ -1,11 +1,15 @@
 //  this component renders a sign-up form with fields for name, phone number, email, and password.
-import Button from "../Button/Button";
+
 import Input from "./Input";
 import "./SignUpForm.css";
 
 export default function SignUpForm() {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    
+  };
   return (
-    <form action="">
+    <form onSubmit={handleSubmit}>
       <div className="signup-container">
         <div className="signup-form">
           <Input
@@ -27,9 +31,7 @@ export default function SignUpForm() {
             name="password"
             placeholder="رمز عبور"
           />
-          <Button buttonStyle="btn--tour" buttonSize="btn--medium">
-            ثبت نام
-          </Button>
+          <input type="submit" className="btn btn--tour btn--medium" value={'ثبت نام'}/>
         </div>
       </div>
     </form>

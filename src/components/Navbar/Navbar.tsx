@@ -1,8 +1,7 @@
 // this component render navbar. navbar contain sidenav in mobile state
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Button from '../Button/Button';
-import './Navbar.css'
+import './Navbar.css';
 
 
 
@@ -55,9 +54,9 @@ export default function Navbar() {
                     </li>
                 </ul>
                 <div className='button-state'>
-                <Button to={'/sign-up'} buttonStyle='btn--outline' buttonSize='btn--medium'>
+                <Link to={'/sign-up'} className='btn-register'>
                        ثبت نام
-                </Button>
+                </Link>
                 </div>
             </div>
         </nav>

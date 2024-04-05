@@ -7,7 +7,7 @@ import './Footer.css'
  export default function Footer() {
    return (
     <div className='footer-container'>
-    <section className='footer-subscription'>
+    <div className='footer-subscription'>
         <p className='footer-subscription-heading'>
             به خبرنامه ما بپیوندید تا از آفرهای تورهای ایرانگردی و جهانگردی با خبر شوید
         </p>
@@ -20,7 +20,7 @@ import './Footer.css'
                 <Button buttonStyle='btn--special' buttonSize='btn--medium'>عضویت</Button>
             </form>
         </div>
-    </section>
+    </div>
     <div className='footer-links'>
         <div className='footer-link-wrapper'>
             <div className='footer-link-items'>
@@ -51,7 +51,7 @@ import './Footer.css'
             </div>
         </div>
     </div>
-    <section className='social-media'>
+    <div className='social-media'>
         <div className='social-media-wrap'>
             <div className='footer-logo'>
                 <Link to={'/'} className='social-logo'>
@@ -76,7 +76,7 @@ import './Footer.css'
                 </Link>
             </div>
         </div>
-    </section>
+    </div>
 </div>
    )
  }

@@ -1,6 +1,5 @@
 // this is a Button component where have STYELS and SIZES variable for setting button
 
-import {Link} from 'react-router-dom'
 import './Button.css'
 
 const STYELS=['btn--primary','btn--outline', 'btn--special', 'btn--search', 'btn--search--place', 'btn--tour']
@@ -13,16 +12,14 @@ type Button = {
     buttonSize: string
 }
 export default function Button(props:Button) {
-    const {to ='',children,buttonStyle, buttonSize}=props
+    const {children,buttonStyle, buttonSize}=props
     const ButtonStyle= STYELS.includes(buttonStyle) ? buttonStyle:STYELS[0]
     const ButtonSize=SIZES.includes(buttonSize) ? buttonSize:SIZES[0]
     
-    return ( 
-        <Link to={`${to}`} className='btn-mobile'>
-            <button  className={`btn ${ButtonSize} ${ButtonStyle}`}>
+    return (  
+            <button  className={`btn btn-mobile ${ButtonSize} ${ButtonStyle}`}>
                 {children}
             </button>
-        </Link>
      );
 }
 
