@@ -14,19 +14,22 @@ export default function SignUpForm() {
         <div className="signup-form">
           <Input
             label="نام و نام خانوادگی:"
+            id='name'
             type="text"
             name="name"
             placeholder="نام و نام خانوادگی"
           />
           <Input
             label="شماره همراه:"
+            id='phone'
             type="text"
             name="number"
             placeholder="شماره تلفن همراه"
           />
-          <Input label="ایمیل:" type="email" name="email" placeholder="ایمیل" />
+          <Input label="ایمیل:" id='email' type="email" name="email" placeholder="ایمیل" />
           <Input
             label="رمز عبور:"
+            id="password"
             type="password"
             name="password"
             placeholder="رمز عبور"

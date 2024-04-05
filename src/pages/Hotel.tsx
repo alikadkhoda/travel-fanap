@@ -28,9 +28,9 @@ export default function Hotel() {
         <div className='hotel' style={{ backgroundImage: `url(${imageHotel})` }}>
                
                <div className='tourism-box'>
-                   <input type="text" name="city" value={hotelInfo.city} onChange={handleHotelInfo} className='search-input' placeholder='نام کشور، شهر و یا نام هتل'autoComplete={"false"} />
-                   <input type="text" name="date" value={hotelInfo.date} onChange={handleHotelInfo} className='search-input' placeholder='تاریخ ورود' autoComplete={"false"} />
-                   <input type="text" name="time" value={hotelInfo.time} onChange={handleHotelInfo} className='search-input' placeholder='مدت اقامت' autoComplete={"false"} />
+                   <input type="text" name="city" value={hotelInfo.city} onChange={handleHotelInfo} className='search-input' placeholder='نام کشور، شهر و یا نام هتل'autoComplete={"off"} />
+                   <input type="text" name="date" value={hotelInfo.date} onChange={handleHotelInfo} className='search-input' placeholder='تاریخ ورود' autoComplete={"off"} />
+                   <input type="text" name="time" value={hotelInfo.time} onChange={handleHotelInfo} className='search-input' placeholder='مدت اقامت' autoComplete={"off"} />
                    <Button buttonStyle='btn--search--place' buttonSize='btn--medium'>
                        جستجوی
                    </Button>

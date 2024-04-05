@@ -23,7 +23,7 @@ export default function Tour() {
               onChange={(e) => setSearchValue(e.target.value)}
               className="search-input"
               placeholder="نام شهر یا کشور"
-              autoComplete={"false"}
+              autoComplete={"off"}
             />
             <Button buttonStyle="btn--search--place" buttonSize="btn--medium">
               جستجو
