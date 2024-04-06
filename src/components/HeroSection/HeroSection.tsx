@@ -1,7 +1,7 @@
 // this component render a parallax section wich contain search input
 import Button from "../Button/Button";
 import "./HeroSection.css";
-import Video from "../../assets/videos/2.mp4";
+import Video from "../../assets/videos/1.mp4";
 import { useState } from "react";
 
 export default function HeroSection() {
